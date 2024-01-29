@@ -5,11 +5,12 @@
 Endpoint : POST /api/users
 
 Request Body :
+
 ```json
 {
-    "username" : "admin",
-    "password" : "admin123",
-    "name"     : "Deri Fauzi"
+  "username": "admin",
+  "password": "admin123",
+  "name": "Deri Fauzi"
 }
 ```
 
@@ -17,10 +18,10 @@ Response Body Succes:
 
 ```json
 {
-    "data" : {
-        "username" : "admin",
-        "name" : "Deri Fauzi"
-    },
+  "data": {
+    "username": "admin",
+    "name": "Deri Fauzi"
+  }
 }
 ```
 
@@ -28,7 +29,7 @@ Response Body Error:
 
 ```json
 {
-    "errors" : "Username Already Registered"
+  "errors": "Username Already Registered"
 }
 ```
 
@@ -40,8 +41,8 @@ Request Body :
 
 ```json
 {
-    "username" : "admin",
-    "password" : "admin123"
+  "username": "admin",
+  "password": "admin123"
 }
 ```
 
@@ -49,9 +50,9 @@ Response Body Succes :
 
 ```json
 {
-    "data" : {
-        "token" : "unique-token",
-    },
+  "data": {
+    "token": "unique-token"
+  }
 }
 ```
 
@@ -59,7 +60,7 @@ Response Body Error:
 
 ```json
 {
-    "errors" : "Username or Password Wrong"
+  "errors": "Username or Password Wrong"
 }
 ```
 
@@ -68,31 +69,34 @@ Response Body Error:
 Endpoint : PATCH /api/users/current
 
 Headers :
+
 - Authorization : token
 
 Request Body :
 
 ```json
 {
-    "name" : "new name",
-    "password" : "new password"
+  "name": "new name",
+  "password": "new password"
 }
 ```
+
 Response Body Succes:
 
 ```json
 {
-    "data" : {
-        "username" : "admin",
-        "name" : "Deri Fauzi"
-    },
+  "data": {
+    "username": "admin",
+    "name": "Deri Fauzi"
+  }
 }
 ```
+
 Response Body Error:
 
 ```json
 {
-    "errors" : "Username Already Registered"
+  "errors": "Username Already Registered"
 }
 ```
 
@@ -101,23 +105,25 @@ Response Body Error:
 Endpoint : GET /api/users/current
 
 Headers :
+
 - Authorization : token
 
 Response Body Success :
 
 ```json
 {
-    "data" : {
-        "username" : "admin",
-        "name" : "Deri Fauzi",
-    }
+  "data": {
+    "username": "admin",
+    "name": "Deri Fauzi"
+  }
 }
 ```
 
 Response Body Error :
+
 ```json
 {
-    "errors" : "Unauthorized"
+  "errors": "Unauthorized"
 }
 ```
 
@@ -129,7 +135,7 @@ Response Body Success :
 
 ```json
 {
-    "data" : "OK"
+  "data": "OK"
 }
 ```
 
@@ -137,6 +143,6 @@ Response Body Error :
 
 ```json
 {
-    "errors" : "Unauthorized"
+  "errors": "Unauthorized"
 }
 ```
